@@ -64,7 +64,7 @@ export default function Home() {
                             "{quote}"
                         </p>
                         <p className="mt-4 text-sm uppercase text-blue-400 tracking-wider">
-                            – Optimus Prime
+                            Optimus Prime
                         </p>
                     </motion.div>
 
