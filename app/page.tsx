@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
@@ -28,12 +27,8 @@ export default function Home() {
     return (
         <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white p-6">
             <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl w-full">
-                <motion.div
-                    initial={{ opacity: 0, x: -40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="flex-shrink-0"
-                >
+                
+                <div className="flex-shrink-0">
                     <Image
                         src="/optimus.png"
                         alt="Optimus Prime"
@@ -41,32 +36,22 @@ export default function Home() {
                         height={600}
                         className="bg-white rounded-lg"
                     />
-                </motion.div>
+                </div>
 
                 <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
-                    <motion.h1
-                        initial={{ opacity: 0, y: -30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-5xl font-bold mb-8"
-                    >
+                    
+                    <h1 className="text-4xl md:text-5xl font-bold mb-8">
                         Optimus Prime Quote Generator
-                    </motion.h1>
+                    </h1>
 
-                    <motion.div
-                        key={quote}
-                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ duration: 0.4 }}
-                        className="bg-gray-800/70 border border-blue-500 shadow-xl rounded-2xl p-8 w-full max-w-xl"
-                    >
+                    <div className="bg-gray-800/70 border border-blue-500 shadow-xl rounded-2xl p-8 w-full max-w-xl">
                         <p className="text-xl md:text-2xl font-medium italic">
                             "{quote}"
                         </p>
                         <p className="mt-4 text-sm uppercase text-blue-400 tracking-wider">
                             Optimus Prime
                         </p>
-                    </motion.div>
+                    </div>
 
                     <button
                         onClick={getNewQuote}
